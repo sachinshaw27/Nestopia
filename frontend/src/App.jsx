@@ -10,7 +10,7 @@ import { userDataContext } from './Context/UserContext'
 import MyListing from './pages/MyListing'
 import ViewCard from './pages/ViewCard'
 import MyBooking from './pages/MyBooking'
-import Booked from './pages/booked'
+import Booked from "./pages/Booked"
 import { ToastContainer, toast } from 'react-toastify';
 
 function App() {
