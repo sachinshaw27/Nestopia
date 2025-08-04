@@ -16,7 +16,7 @@ function SignUp() {
      let [name, setName] = useState("")
      let [email, setEmail] = useState("")
      let [password, setPassword] = useState("")
-     let [loading,setLoading]= useContext(authDataContext)
+     let {loading,setLoading} = useContext(authDataContext)
 
      const handleSignUp  =  async (e) => {
       setLoading(true)
@@ -42,7 +42,7 @@ function SignUp() {
     <div className='w-[100vw] h-[100vh] flex items-center justify-center relative'>
       <div className='w-[50px] h-[50px] bg-[red] cursor-pointer absolute top-[10%] left-[20px] rounded-[50%] flex items-center justify-center' onClick={()=> navigate("/")}><FaArrowLeftLong className='w-[20px] h-[20px] text-[white]' /></div>
       <form action="" className='max-w-[900px] w-[90%] h-[600px] flex items-center justify-center flex-col md:items-start gap-[10px]' onSubmit={handleSignUp}>
-        <h1 className='text-[30px] text-[black]'>Welcome to AirBnb</h1>
+        <h1 className='text-[30px] text-[black]'>Welcome to Nestopia</h1>
         <div className='w-[90%] flex items-start justify-start flex-col gap-[10px] mt-[30px] '>
           <label htmlFor="name" className='text-[20px]'>UserName</label>
           <input type="text" id='name' className='w-[90%] h-[40px] border-[2px] border-[#555656] rounded-lg text-[18px] px-[20px]' required onChange={(e)=>setName(e.target.value)} value={name}/>
